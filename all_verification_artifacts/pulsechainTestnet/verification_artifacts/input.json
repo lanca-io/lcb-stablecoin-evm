@@ -1,0 +1,18 @@
+{
+  "SignatureChecker": {
+    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
+    "contractCreationTxHash": "0xdb1588bf3225eb6a26f17245e6674a1f4130c389f3009925a714391275fb80db",
+    "verificationType": "partial"
+  },
+  "FiatTokenV2_2": {
+    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
+    "contractCreationTxHash": "0x4bc116fcdc17cbd5d0288a5f821cfdc8901719dfe60c4a36236326cf7b418088",
+    "verificationType": "partial"
+  },
+  "FiatTokenProxy": {
+    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
+    "contractCreationTxHash": "0xc64ddf682b03f8265d7408b4854a30daca0163d3d93c4f50cb5d91a887290877",
+    "verificationType": "partial"
+  },
+  "rpcUrl": "https://pulsechain-testnet-rpc.publicnode.com"
+}

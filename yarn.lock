@@ -883,7 +883,7 @@
 
 "@concero/rpcs@github:concero/rpcs":
   version "1.0.0"
-  resolved "https://codeload.github.com/concero/rpcs/tar.gz/08d8d8d88ccebde943b9f21b1c831ff3430b7a85"
+  resolved "https://codeload.github.com/concero/rpcs/tar.gz/7bdd24e6b15eb1c50eb70d3a468e590a9a2529c7"
   dependencies:
     acorn "8.14.0"
     acorn-walk "8.3.4"
@@ -894,7 +894,7 @@
 
 "@concero/v2-contracts@github:concero/messaging-contracts-v2#feature/v3/dev":
   version "1.0.0"
-  resolved "https://codeload.github.com/concero/messaging-contracts-v2/tar.gz/8c1d13da3d348e9bd5e4f3cded4b7130314ac920"
+  resolved "https://codeload.github.com/concero/messaging-contracts-v2/tar.gz/f4ed5d917ee4aa0515db33b8b01333643bb7c16e"
   dependencies:
     "@chainlink/contracts" "1.3.0"
     "@chainlink/functions-toolkit" "0.3.2"
@@ -3122,9 +3122,9 @@
     minimatch "*"
 
 "@types/node@*":
-  version "24.10.1"
-  resolved "https://registry.npmjs.org/@types/node/-/node-24.10.1.tgz#91e92182c93db8bd6224fca031e2370cef9a8f01"
-  integrity sha512-GNWcUTRBgIRJD5zj+Tq0fKOJ5XZajIiBroOF0yvj2bSU1WvNdYS/dn9UxwsujGW4JX06dnHyjV2y9rRaybH0iQ==
+  version "25.0.3"
+  resolved "https://registry.npmjs.org/@types/node/-/node-25.0.3.tgz#79b9ac8318f373fbfaaf6e2784893efa9701f269"
+  integrity sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==
   dependencies:
     undici-types "~7.16.0"
 
@@ -6358,9 +6358,9 @@ nan@2.14.0:
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
 nan@^2.14.0:
-  version "2.23.1"
-  resolved "https://registry.npmjs.org/nan/-/nan-2.23.1.tgz#6f86a31dd87e3d1eb77512bf4b9e14c8aded3975"
-  integrity sha512-r7bBUGKzlqk8oPBDYxt6Z0aEdF1G1rwlMcLk8LCOMbOzf0mG+JUfUzG4fIMWwHWP0iyaLWEQZJmtB7nOHEm/qw==
+  version "2.24.0"
+  resolved "https://registry.npmjs.org/nan/-/nan-2.24.0.tgz#a8919b36e692aa5b260831910e4f81419fc0a283"
+  integrity sha512-Vpf9qnVW1RaDkoNKFUvfxqAbtI8ncb8OJlqZ9wwpXzWPEsvsB1nvdUi6oYrHIkQ1Y/tMDnr1h4nczS0VB9Xykg==
 
 napi-macros@~2.0.0:
   version "2.0.0"
