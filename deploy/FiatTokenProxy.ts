@@ -22,7 +22,7 @@ const deployFiatTokenProxy = async function (hre: HardhatRuntimeEnvironment): Pr
 
 	const implementation = getEnvVar(`USDC_${getNetworkEnvKey(srcChainName)}`);
 
-	const viemAccount = getViemAccount(networkType, "proxyDeployer");
+	const viemAccount = getViemAccount(networkType, "deployer");
 	const { walletClient, publicClient } = getFallbackClients(srcChain, viemAccount);
 
 	let gasLimit = 0;
@@ -35,7 +35,7 @@ const deployFiatTokenProxy = async function (hre: HardhatRuntimeEnvironment): Pr
 		hre,
 		args: [implementation],
 		publicClient,
-		proxy: true,
+		log: true,
 		gasLimit,
 	});
 

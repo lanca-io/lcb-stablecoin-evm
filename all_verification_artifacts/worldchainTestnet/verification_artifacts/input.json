@@ -1,17 +1,17 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
-    "contractCreationTxHash": "0xcfae678ed7873be2daea90b55bf0c2074736d8701cd0da254ee5c827a1bc25b9",
+    "contractAddress": "0x40e2478A106A46B27fF8EF0E76dB198B0b593894",
+    "contractCreationTxHash": "0xee2ee30f3faa644b187b8229d3d8d4aeeab2941ad526df1cf012266db5ac163c",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0x83cfd589129dc7773738167cbcf17765bd0b19cfc8e19307f964697f93c17f0d",
+    "contractAddress": "0xDa1ED16966F352b173C494626825493516525Cb1",
+    "contractCreationTxHash": "0x47fb3f6d4c7b1404ff42cda590419d848e180938baeefe890b1caa30448e6e31",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
-    "contractCreationTxHash": "0x6195f7df4d90c8fdef7438d8f59d0ca767b8ccd2f20067b30b372ec770718aca",
+    "contractAddress": "0x85E203ed81255284B076510201EF2fc9bb832819",
+    "contractCreationTxHash": "0xd1843331b101d3cd3aa64c1c66cf1a6737c8383a31418e2d7b62ce50ccec09ec",
     "verificationType": "partial"
   },
   "rpcUrl": "https://worldchain-sepolia.gateway.tenderly.co"

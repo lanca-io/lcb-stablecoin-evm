@@ -23,7 +23,7 @@ export async function fiatTokenTransferOwnership(
 	if (!fiatTokenProxyAddress) return;
 
 	// viemAccount should be master minter address
-	const viemAccount = getViemAccount(type, "proxyDeployer");
+	const viemAccount = getViemAccount(type, "deployer");
 	const { walletClient, publicClient } = getFallbackClients(srcChain, viemAccount);
 
 	try {

@@ -16,7 +16,7 @@ const deployFiatTokenProxyAdmin = async function (
 
 	const implementation = getEnvVar(`USDC_${getNetworkEnvKey(srcChainName)}`);
 
-	const viemAccount = getViemAccount(networkType, "proxyDeployer");
+	const viemAccount = getViemAccount(networkType, "deployer");
 	const { publicClient } = getFallbackClients(srcChain, viemAccount);
 
 	let gasLimit = 0;
@@ -29,7 +29,7 @@ const deployFiatTokenProxyAdmin = async function (
 		hre,
 		args: [implementation],
 		publicClient,
-		proxy: true,
+		log: true,
 		gasLimit,
 	});
 

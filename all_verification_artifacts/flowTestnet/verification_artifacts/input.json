@@ -1,17 +1,17 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
-    "contractCreationTxHash": "0xcf41d8097e271aeb8a07ba3815d7a60f2c1dc6bacfa6e2797d02fb9b9cb0d355",
+    "contractAddress": "0xDa1ED16966F352b173C494626825493516525Cb1",
+    "contractCreationTxHash": "0x6cf1bf3071b65e1041f904f4fb0bfa702bc807314b254c6cf30a069d3e821fe9",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0xddafaf7b9038d89594e2804f06660ab6807b6dceddba63012ab319939fb77f65",
+    "contractAddress": "0x8Bcf15350a75D3b76aEB00eBd354C0222984eE32",
+    "contractCreationTxHash": "0x7992b8eb0e725e1b9cb3f48ff551ee50a030b28c420c327bdadc6624bffb2dd6",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
-    "contractCreationTxHash": "0x9d4728a18def6952d842dde70acf83f4cfcd1244ed71fccec9897e1fdc582582",
+    "contractAddress": "0xD383149309dD47f6c42F524f7278f8Bc84251fC6",
+    "contractCreationTxHash": "0x29637a1a6def346d642be937f03ab8ec3676d6861225243e6af76bbe4abb395a",
     "verificationType": "partial"
   },
   "rpcUrl": "https://testnet.evm.nodes.onflow.org"

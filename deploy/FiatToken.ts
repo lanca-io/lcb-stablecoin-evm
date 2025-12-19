@@ -16,7 +16,7 @@ const deployFiatToken = async function (hre: HardhatRuntimeEnvironment): Promise
 
 	log(`Deploying FiatToken implementation:`, "deployFiatToken", name);
 
-	const viemAccount = getViemAccount(networkType, "proxyDeployer");
+	const viemAccount = getViemAccount(networkType, "deployer");
 	const { publicClient } = getFallbackClients(chain, viemAccount);
 
 	let gasLimit = 0;

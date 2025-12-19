@@ -1,17 +1,17 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0x91a8527fda29d74193600abd5889d92fcf8b350f30cd96f8951556eca817b242",
+    "contractAddress": "0xDFF2BD9f88B657ff02e8E585aB837B84038fA1cC",
+    "contractCreationTxHash": "0xe9237ec8fb02afdbfa22dfcfe2b047bf6a340cb42956d6d93dcfdbc800fbb381",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0x5Dc3Bd8108Ed3e12A439d9832a573bfE62368c4C",
-    "contractCreationTxHash": "0xcdd5c8c24870676aed6ea1a719783f6d22fd3e2413cfcad2ad32312530f1e302",
+    "contractAddress": "0x80c54ef6842ae5928230c631dcdCb4E3A883Cdea",
+    "contractCreationTxHash": "0xd73b9640fe348e337eb66751aa4518e951573aade6992df62f22b56f05680bfa",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
-    "contractCreationTxHash": "0x26773844ca7e9c297fc642b24d3b1567d2467abdccd84fb1d28dad90bf105356",
+    "contractAddress": "0xBC123274E4df78D1053977b9ABf8B2b5C80500D2",
+    "contractCreationTxHash": "0x7b270b431ecfcef1f42651dcbe4b2b7dbe65d531dfead4a3bca39873eceff66b",
     "verificationType": "partial"
   },
   "rpcUrl": "https://rpc-amoy.polygon.technology"

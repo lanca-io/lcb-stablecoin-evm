@@ -52,9 +52,6 @@ const config: HardhatUserConfig = {
 		deployer: {
 			default: 0,
 		},
-		proxyDeployer: {
-			default: 1,
-		},
 	},
 	networks: conceroNetworks,
 	etherscan: {

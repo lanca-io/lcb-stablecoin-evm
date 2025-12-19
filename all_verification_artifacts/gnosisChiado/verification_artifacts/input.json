@@ -1,18 +1,18 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
-    "contractCreationTxHash": "0x78423057a87bd24a20206cc5672b4e3c90fe902878bd9d2f49384bdf402fae75",
+    "contractAddress": "0xc224525b9E059D2DCCdCE8D556C85d5FE5C26CBA",
+    "contractCreationTxHash": "0xb8187511a3909c7953e7f6f981c8817e4c0a56ec58068dc502c241e25cd26cda",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0xf83cec1dabcaeb5de9d0e0ecd42387cec5b8324149334dc4f82c78b26a888994",
+    "contractAddress": "0x93d546DAF2a9873Fd919c2d0B7d012aA0CE48621",
+    "contractCreationTxHash": "0x51ddc728ab2618c1ada796ffb24f96db7196934c670672c4ea6b265dc8180aab",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
-    "contractCreationTxHash": "0x849af48eaeb322e57b9a4263a4e219213049410ab9668fdc0f5923ec1673b98c",
+    "contractAddress": "0x80c54ef6842ae5928230c631dcdCb4E3A883Cdea",
+    "contractCreationTxHash": "0xb4897426b503a6a4538f0c090d671547dcc3073288d9e2f3bffecce425026a15",
     "verificationType": "partial"
   },
-  "rpcUrl": "https://rpc.chiado.gnosis.gateway.fm"
+  "rpcUrl": "https://rpc.chiadochain.net"
 }

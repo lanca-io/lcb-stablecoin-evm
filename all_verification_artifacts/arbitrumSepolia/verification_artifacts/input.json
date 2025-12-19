@@ -1,0 +1,18 @@
+{
+  "SignatureChecker": {
+    "contractAddress": "0x367779ac49C996854E77476b7F6FA94757fc8590",
+    "contractCreationTxHash": "0xf1bfe02be1a94b925df8869339bd25a6b8a06579b290a4867f1cf7deeefe284c",
+    "verificationType": "partial"
+  },
+  "FiatTokenV2_2": {
+    "contractAddress": "0x8EDc258850ECF0570b74C07dD481EA0c5488c551",
+    "contractCreationTxHash": "0x04e78513af5e8b9e217e19b78bdebc25a322c8e054c7b341429d15a22670c282",
+    "verificationType": "partial"
+  },
+  "FiatTokenProxy": {
+    "contractAddress": "0x575ddc76EA5e6909ed5FF690ba7088ecf90D1D86",
+    "contractCreationTxHash": "0x33caf09bf0293ecb182ab4b1f48bd1ae0fa986de5157c086b417c171d982aa90",
+    "verificationType": "partial"
+  },
+  "rpcUrl": "https://arbitrum-sepolia.gateway.tenderly.co"
+}

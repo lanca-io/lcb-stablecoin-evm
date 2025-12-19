@@ -1,0 +1,18 @@
+{
+  "SignatureChecker": {
+    "contractAddress": "0xdbf98B16D7bE6b88Aa38f462759b810ca5148d93",
+    "contractCreationTxHash": "0xd51d0f42091db851a4a803ea8d7170668cdfedf785122491d6d2f0bb61d4f54f",
+    "verificationType": "partial"
+  },
+  "FiatTokenV2_2": {
+    "contractAddress": "0xB97FFe779C33731183D8BC173305d11527Ea57ed",
+    "contractCreationTxHash": "0x0e6e5ff981d4f4c857826a10bcd2efbc81807d944c3773d01146d78a94395bc2",
+    "verificationType": "partial"
+  },
+  "FiatTokenProxy": {
+    "contractAddress": "0x94Ad06107924f3Ad3C9f96b11a6EFa47aC71c67c",
+    "contractCreationTxHash": "0xef711de20dad0dccedfbe3a6c8a4ee41e1bd76dbfd99c6f275ddab0cfe115f35",
+    "verificationType": "partial"
+  },
+  "rpcUrl": "https://gateway.tenderly.co/public/sepolia"
+}
