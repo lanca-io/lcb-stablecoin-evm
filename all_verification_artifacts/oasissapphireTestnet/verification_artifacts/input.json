@@ -1,17 +1,17 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
-    "contractCreationTxHash": "0x3abbcdada8ac5e7dd01d0f070828d5fe01c9d2968e81683e97c70eaa10b1f368",
+    "contractAddress": "0x58176C91007502b77109F21b274094B00a49450C",
+    "contractCreationTxHash": "0xf513217522ea92adc64d98af3f74ab8e41a82c15c7ba93be11643c52b4d83781",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0x859028523d63818ef72c56080f60296c6407d62c293338d389be81510190f10c",
+    "contractAddress": "0x4b5F463f5EdcAc002B49CACE8b792D032c574B94",
+    "contractCreationTxHash": "0xd9b1dd09dc6622de6e468d2da7bd73bc34a0fe0a7fe27873e1493a856cb2fe47",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
-    "contractCreationTxHash": "0xe2d591afc019ae4cc93f912705424f118701b229c34dbc407c48dd023b277959",
+    "contractAddress": "0xe197D216F87c1b2487864Bb148882b69408BaB1f",
+    "contractCreationTxHash": "0x1c7646f374054bf34c3df988f715245ec038b2f37c679c8da157ab677a1686a7",
     "verificationType": "partial"
   },
   "rpcUrl": "https://testnet.sapphire.oasis.io"

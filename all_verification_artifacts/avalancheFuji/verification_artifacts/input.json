@@ -1,17 +1,17 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x51e2c9F534DaC351F8138cBBdD6b90647a886759",
-    "contractCreationTxHash": "0xd68b86e4f05e2fe1b3f858636fae14b952b795b354ccd1f4a75338a9974724aa",
+    "contractAddress": "0x5467e24D0026dC0222FF7BCF491eAeD920840EE1",
+    "contractCreationTxHash": "0x5178ba18e35f1c949f3a52770dac10567afa77717e095ad785175c350327cb00",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xE832A2E20D83F5F0f742E2B5d21451B8b4D3458A",
-    "contractCreationTxHash": "0x1a7a5353a207ca062011db3915fb7f2b11e3f357e2238e983f26080a1dfb6de6",
+    "contractAddress": "0x6B6CAB8a89fE12EcbEf22a3879F21DE0F09cCF64",
+    "contractCreationTxHash": "0xab2dbc4d92edf33bcaaac65dfd176ef6e9a3b358d9291a45b42303a86f9e733e",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x3b5F13688bCe298712DB0a06De07C42F2731cB8C",
-    "contractCreationTxHash": "0x4e53992b62033e5a0a85bb54df1e4732c1907d8518a1a1f15ca89a03107d4bdb",
+    "contractAddress": "0x796492c07df889bDe1C99aa2Ca1B099a55a50613",
+    "contractCreationTxHash": "0xdc447947357b1f552955bb992e57bf2447b1145a856b9d3a4cf2e361fdd144cf",
     "verificationType": "partial"
   },
   "rpcUrl": "https://avalanche-fuji-c-chain-rpc.publicnode.com"

@@ -1,17 +1,17 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
-    "contractCreationTxHash": "0x33527aa4332ebf478f3332641f0271ae19663cecc1f9342f5a97e97116697949",
+    "contractAddress": "0xc224525b9E059D2DCCdCE8D556C85d5FE5C26CBA",
+    "contractCreationTxHash": "0x7a770aa052602e7dd205a9b2e14857fbe8fc9539847b4ffae5f2b97f8bedfdf6",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0x0eb52288e5432480bbdc487ab1321a5029546a83461c7f23c85bfc70ed3d8304",
+    "contractAddress": "0x93d546DAF2a9873Fd919c2d0B7d012aA0CE48621",
+    "contractCreationTxHash": "0xfd8a3e1d8f52a127936b803f8028e7e13600899ef500463cce52e936411d6435",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
-    "contractCreationTxHash": "0x8d824b775a2b78a25e179cabe3e27db65e65412550c65e393896a5aaac70eb14",
+    "contractAddress": "0x80c54ef6842ae5928230c631dcdCb4E3A883Cdea",
+    "contractCreationTxHash": "0x5cc944e3b3bf3546f4a3e5660996be17963fa2c58df6282fb290eef1c108f3cd",
     "verificationType": "partial"
   },
   "rpcUrl": "https://saigon-testnet.roninchain.com/rpc"

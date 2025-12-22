@@ -1,0 +1,18 @@
+{
+  "SignatureChecker": {
+    "contractAddress": "0x16F9E93fD2010bf34Dd25A99948D95824EbB0C37",
+    "contractCreationTxHash": "0xfab2514b9f9788b2531852ca95eaed3b530f049ee8a146fdc2601feae4be02fc",
+    "verificationType": "partial"
+  },
+  "FiatTokenV2_2": {
+    "contractAddress": "0x51e2c9F534DaC351F8138cBBdD6b90647a886759",
+    "contractCreationTxHash": "0xa2b42635699072cf62de57f39717146b32f3e6a9cd43719cb1b84449bc3a2318",
+    "verificationType": "partial"
+  },
+  "FiatTokenProxy": {
+    "contractAddress": "0xFF1349ac7566cB49DBCED9a0036BCc01E180fE09",
+    "contractCreationTxHash": "0x1ff6243be1916e8a5340fc3ebf25000401a8d666692ddfc09da7cf0adb9c77d1",
+    "verificationType": "partial"
+  },
+  "rpcUrl": "https://optimism-sepolia-public.nodies.app"
+}

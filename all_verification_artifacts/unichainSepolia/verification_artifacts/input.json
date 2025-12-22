@@ -1,12 +1,12 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
-    "contractCreationTxHash": "0xdadb867f891a2a6014cbc8d67c57e8ff5e49a54d5bd61ba2e615267af72b0141",
+    "contractAddress": "0x8a563699627F898DaAE9F8B8078e8857727c3A9f",
+    "contractCreationTxHash": "0xf7e5f830b261f9d2262fd96892c9d2a0a497337581b9a4e9edac71f489a90ee8",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0xb0866fcdbcd6239d255d00e26e907662fb2257287a962c0dcd2ef6b2ef9781c4",
+    "contractAddress": "0x56286b570bE462f74F9c0AD53D99b86Be6529919",
+    "contractCreationTxHash": "0x18579eeff7edbaa159aa9de12cbcd36d936596114c9c030bd97d143dbd69e59f",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {

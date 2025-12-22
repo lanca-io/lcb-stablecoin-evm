@@ -1,17 +1,17 @@
 {
   "SignatureChecker": {
-    "contractAddress": "0x6634C37b0E1D855744dbC0a8f72FDE5DaD825B6C",
-    "contractCreationTxHash": "0xf44da4314f8c97394f921c1c27348db4d91ec68c6006b51aa7064ae625c45333",
+    "contractAddress": "0x85E203ed81255284B076510201EF2fc9bb832819",
+    "contractCreationTxHash": "0xe61b7f3f3eef70d0d4257a65b082becb0352e701c69422d704ffa3c9fa342eef",
     "verificationType": "partial"
   },
   "FiatTokenV2_2": {
-    "contractAddress": "0xf606425cC0f8D065Af0C4b92110159fbe54ECF61",
-    "contractCreationTxHash": "0xd3ddf9606347e833ddc26cbda07d3fb531697135870c46edb9b3177cd9258b92",
+    "contractAddress": "0xD383149309dD47f6c42F524f7278f8Bc84251fC6",
+    "contractCreationTxHash": "0x8dd72290dd7096e3759e82338e5a674c7d464d33864cd23ae8c9a56ecc7ce563",
     "verificationType": "partial"
   },
   "FiatTokenProxy": {
-    "contractAddress": "0x9B7550D337bB449b89C6f9C926C3b976b6f4095b",
-    "contractCreationTxHash": "0xe2264443808bcceca2bfeac6a47dd01a066c427000fb0b656fbc80ceafc29ac3",
+    "contractAddress": "0xc224525b9E059D2DCCdCE8D556C85d5FE5C26CBA",
+    "contractCreationTxHash": "0xebc1cd3e970d279f87af7e5b35bfb4aebab6c6020ee138ae152b4cf64b25de62",
     "verificationType": "partial"
   },
   "rpcUrl": "https://bepolia.rpc.berachain.com"
