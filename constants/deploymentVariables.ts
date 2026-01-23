@@ -1,8 +1,6 @@
+import { ConceroNetwork } from "@concero/contract-utils";
 import { WriteContractParameters } from "viem";
 import type { WaitForTransactionReceiptParameters } from "viem/actions/public/waitForTransactionReceipt";
-
-import { ConceroNetwork } from "../types/ConceroNetwork";
-import { EnvPrefixes } from "../types/deploymentVariables";
 
 enum ProxyEnum {
 	lcBridgeProxy = "lcBridgeProxy",
@@ -36,21 +34,10 @@ function getViemReceiptConfig(chain: ConceroNetwork): Partial<WaitForTransaction
 	};
 }
 
-const envPrefixes: EnvPrefixes = {
-	lcBridge: "LANCA_CANONICAL_BRIDGE",
-	lcBridgeProxy: "LANCA_CANONICAL_BRIDGE_PROXY",
-	lcBridgeProxyAdmin: "LANCA_CANONICAL_BRIDGE_PROXY_ADMIN",
-	lcBridgePool: "LC_BRIDGE_POOL",
-	lcBridgePoolProxy: "LC_BRIDGE_POOL_PROXY",
-	lcBridgePoolProxyAdmin: "LC_BRIDGE_POOL_PROXY_ADMIN",
-	pause: "CONCERO_PAUSE",
-};
-
 export {
 	viemReceiptConfig,
 	writeContractConfig,
 	ProxyEnum,
-	envPrefixes,
 	getViemReceiptConfig,
 	defaultRateLimits,
 	defaultMinterAllowedAmount,

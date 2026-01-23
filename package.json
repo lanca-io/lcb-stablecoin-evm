@@ -16,11 +16,12 @@
         "clean:forge": "forge clean",
         "clean": "npm run clean:hardhat && npm run clean:forge",
         "size-contracts": "hardhat size-contracts",
-        "check-updates": "npx npm-check-updates"
+        "check-updates": "npx npm-check-updates",
+        "upgrade:contract-utils": "yarn cache clean @concero/contract-utils && yarn upgrade @concero/contract-utils"
     },
     "devDependencies": {
         "@chainlink/env-enc": "1.0.5",
-        "@concero/contract-utils": "github:concero/contract-utils",
+        "@concero/contract-utils": "https://github.com/concero/contract-utils#feature/v3/export-generic-deploy",
         "@concero/rpcs": "github:concero/rpcs",
         "@concero/v2-contracts": "github:concero/messaging-contracts-v2#feature/v3/dev",
         "@concero/v2-networks": "github:concero/v2-networks",

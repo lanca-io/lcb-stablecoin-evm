@@ -1,23 +1,12 @@
-import { getNetworkEnvKey } from "@concero/contract-utils";
-import { hardhatDeployWrapper } from "@concero/contract-utils";
-import { Deployment } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
-import { conceroNetworks } from "../constants";
 import { DEPLOY_CONFIG_TESTNET } from "../constants/deployConfigTestnet";
 import { copyMetadataForVerification, saveVerificationData } from "../tasks/utils";
-import { getFallbackClients, getViemAccount, log, updateEnvVariable } from "../utils";
+import { EnvFileName } from "../types/deploymentVariables";
+import { IDeployResult, genericDeploy, getNetworkEnvKey, log, updateEnvVariable } from "../utils";
 
-const deployFiatToken = async function (hre: HardhatRuntimeEnvironment): Promise<Deployment> {
+export const deployFiatToken = async (hre: HardhatRuntimeEnvironment): Promise<IDeployResult> => {
 	const { name } = hre.network;
-
-	const chain = conceroNetworks[name as keyof typeof conceroNetworks];
-	const { type: networkType } = chain;
-
-	log(`Deploying FiatToken implementation:`, "deployFiatToken", name);
-
-	const viemAccount = getViemAccount(networkType, "deployer");
-	const { publicClient } = getFallbackClients(chain, viemAccount);
 
 	let gasLimit = 0;
 	const config = DEPLOY_CONFIG_TESTNET[name];
@@ -25,43 +14,37 @@ const deployFiatToken = async function (hre: HardhatRuntimeEnvironment): Promise
 		gasLimit = config.usdc?.gasLimit || 0;
 	}
 
-	const signatureCheckerDeployment = await hardhatDeployWrapper("SignatureChecker", {
+	const signatureCheckerDeployment = await genericDeploy({
 		hre,
-		args: [],
-		publicClient,
-		gasLimit,
+		contractName: "SignatureChecker",
 	});
 
-	const deployment = await hardhatDeployWrapper("FiatTokenV2_2", {
+	const signatureCheckerAddress = signatureCheckerDeployment.address;
+
+	const deployment = await genericDeploy({
 		hre,
-		args: [],
-		publicClient,
-		gasLimit,
-		libraries: {
-			SignatureChecker: signatureCheckerDeployment.address,
+		contractName: "FiatTokenV2_2",
+		txParams: {
+			gasLimit: BigInt(gasLimit),
+			libraries: {
+				SignatureChecker: signatureCheckerAddress,
+			},
 		},
 	});
 
-	log(`Deployed at: ${deployment.address} \n`, "deployFiatToken", name);
-
 	updateEnvVariable(
-		`USDC_${getNetworkEnvKey(name)}`,
+		`USDC_${getNetworkEnvKey(deployment.chainName)}`,
 		deployment.address,
-		`deployments.${networkType}` as const,
+		`deployments.${deployment.chainType}` as EnvFileName,
 	);
 
 	await saveVerificationData(
 		name,
 		"SignatureChecker",
-		signatureCheckerDeployment.address,
-		signatureCheckerDeployment.transactionHash || "",
+		signatureCheckerAddress,
+		signatureCheckerDeployment.receipt.hash,
 	);
-	await saveVerificationData(
-		name,
-		"FiatTokenV2_2",
-		deployment.address,
-		deployment.transactionHash || "",
-	);
+	await saveVerificationData(name, "FiatTokenV2_2", deployment.address, deployment.receipt.hash);
 
 	await copyMetadataForVerification(name, "SignatureChecker");
 	await copyMetadataForVerification(name, "FiatTokenV2_2");
@@ -73,7 +56,7 @@ const deployFiatToken = async function (hre: HardhatRuntimeEnvironment): Promise
 				address: deployment.address,
 				constructorArguments: [],
 				libraries: {
-					SignatureChecker: signatureCheckerDeployment.address,
+					SignatureChecker: signatureCheckerAddress,
 				},
 			});
 		} catch (error) {
@@ -83,8 +66,3 @@ const deployFiatToken = async function (hre: HardhatRuntimeEnvironment): Promise
 
 	return deployment;
 };
-
-(deployFiatToken as any).tags = ["FiatToken"];
-
-export default deployFiatToken;
-export { deployFiatToken };

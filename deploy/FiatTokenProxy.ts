@@ -1,21 +1,24 @@
-import { getNetworkEnvKey } from "@concero/contract-utils";
-import { hardhatDeployWrapper } from "@concero/contract-utils";
-import { Deployment } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
 import { conceroNetworks, getViemReceiptConfig } from "../constants";
 import { DEPLOY_CONFIG_TESTNET } from "../constants/deployConfigTestnet";
 import { copyMetadataForVerification, saveVerificationData } from "../tasks/utils";
+import { EnvFileName } from "../types/deploymentVariables";
 import {
+	IDeployResult,
 	err,
+	genericDeploy,
 	getEnvVar,
 	getFallbackClients,
+	getNetworkEnvKey,
 	getViemAccount,
 	log,
 	updateEnvVariable,
 } from "../utils";
 
-const deployFiatTokenProxy = async function (hre: HardhatRuntimeEnvironment): Promise<Deployment> {
+export const deployFiatTokenProxy = async (
+	hre: HardhatRuntimeEnvironment,
+): Promise<IDeployResult> => {
 	const { name: srcChainName } = hre.network;
 	const srcChain = conceroNetworks[srcChainName as keyof typeof conceroNetworks];
 	const { type: networkType } = srcChain;
@@ -31,20 +34,21 @@ const deployFiatTokenProxy = async function (hre: HardhatRuntimeEnvironment): Pr
 		gasLimit = config.proxy?.gasLimit || 0;
 	}
 
-	const deployment = await hardhatDeployWrapper("FiatTokenProxy", {
-		hre,
-		args: [implementation],
-		publicClient,
-		log: true,
-		gasLimit,
-	});
-
-	log(`Deployment completed: ${deployment.address} \n`, "deployFiatTokenProxy", srcChainName);
+	const deployment = await genericDeploy(
+		{
+			hre,
+			contractName: "FiatTokenProxy",
+			txParams: {
+				gasLimit: BigInt(gasLimit),
+			},
+		},
+		implementation,
+	);
 
 	updateEnvVariable(
-		`USDC_PROXY_${getNetworkEnvKey(srcChainName)}`,
+		`USDC_PROXY_${getNetworkEnvKey(deployment.chainName)}`,
 		deployment.address,
-		`deployments.${networkType}` as const,
+		`deployments.${deployment.chainType}` as EnvFileName,
 	);
 
 	const fiatTokenProxyAdminAddress = getEnvVar(
@@ -79,7 +83,7 @@ const deployFiatTokenProxy = async function (hre: HardhatRuntimeEnvironment): Pr
 			srcChainName,
 			"FiatTokenProxy",
 			deployment.address,
-			deployment.transactionHash || "",
+			deployment.receipt.hash,
 		);
 		await copyMetadataForVerification(srcChainName, "FiatTokenProxy");
 	} catch (error) {
@@ -92,8 +96,3 @@ const deployFiatTokenProxy = async function (hre: HardhatRuntimeEnvironment): Pr
 
 	return deployment;
 };
-
-(deployFiatTokenProxy as any).tags = ["FiatTokenProxy"];
-
-export default deployFiatTokenProxy;
-export { deployFiatTokenProxy };

@@ -1,23 +1,21 @@
-import { getNetworkEnvKey } from "@concero/contract-utils";
-import { hardhatDeployWrapper } from "@concero/contract-utils";
-import { Deployment } from "hardhat-deploy/types";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
-import { conceroNetworks } from "../constants";
 import { DEPLOY_CONFIG_TESTNET } from "../constants/deployConfigTestnet";
-import { getEnvVar, getFallbackClients, getViemAccount, log, updateEnvVariable } from "../utils";
+import { EnvFileName } from "../types/deploymentVariables";
+import {
+	IDeployResult,
+	genericDeploy,
+	getEnvVar,
+	getNetworkEnvKey,
+	updateEnvVariable,
+} from "../utils";
 
-const deployFiatTokenProxyAdmin = async function (
+export const deployFiatTokenProxyAdmin = async (
 	hre: HardhatRuntimeEnvironment,
-): Promise<Deployment> {
+): Promise<IDeployResult> => {
 	const { name: srcChainName } = hre.network;
-	const srcChain = conceroNetworks[srcChainName as keyof typeof conceroNetworks];
-	const { type: networkType } = srcChain;
 
 	const implementation = getEnvVar(`USDC_${getNetworkEnvKey(srcChainName)}`);
-
-	const viemAccount = getViemAccount(networkType, "deployer");
-	const { publicClient } = getFallbackClients(srcChain, viemAccount);
 
 	let gasLimit = 0;
 	const config = DEPLOY_CONFIG_TESTNET[srcChainName];
@@ -25,30 +23,22 @@ const deployFiatTokenProxyAdmin = async function (
 		gasLimit = config.proxyAdmin?.gasLimit || 0;
 	}
 
-	const deployment = await hardhatDeployWrapper("AdminUpgradeabilityProxy", {
-		hre,
-		args: [implementation],
-		publicClient,
-		log: true,
-		gasLimit,
-	});
-
-	log(
-		`Deployment completed: ${deployment.address} \n`,
-		"deployFiatTokenProxyAdmin",
-		srcChainName,
+	const deployment = await genericDeploy(
+		{
+			hre,
+			contractName: "AdminUpgradeabilityProxy",
+			txParams: {
+				gasLimit: BigInt(gasLimit),
+			},
+		},
+		implementation,
 	);
 
 	updateEnvVariable(
-		`USDC_PROXY_ADMIN_${getNetworkEnvKey(srcChainName)}`,
+		`USDC_PROXY_ADMIN_${getNetworkEnvKey(deployment.chainName)}`,
 		deployment.address,
-		`deployments.${networkType}` as const,
+		`deployments.${deployment.chainType}` as EnvFileName,
 	);
 
 	return deployment;
 };
-
-(deployFiatTokenProxyAdmin as any).tags = ["FiatTokenProxyAdmin"];
-
-export default deployFiatTokenProxyAdmin;
-export { deployFiatTokenProxyAdmin };

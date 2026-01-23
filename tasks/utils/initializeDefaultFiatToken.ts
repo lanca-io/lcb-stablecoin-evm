@@ -1,7 +1,12 @@
-import { getNetworkEnvKey } from "@concero/contract-utils";
-
 import { conceroNetworks, getViemReceiptConfig } from "../../constants";
-import { err, getEnvVar, getFallbackClients, getViemAccount, log } from "../../utils";
+import {
+	err,
+	getEnvVar,
+	getFallbackClients,
+	getNetworkEnvKey,
+	getViemAccount,
+	log,
+} from "../../utils";
 
 export async function initializeDefaultFiatToken(srcChainName: string): Promise<void> {
 	const srcChain = conceroNetworks[srcChainName as keyof typeof conceroNetworks];
